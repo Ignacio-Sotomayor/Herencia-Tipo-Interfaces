@@ -1,0 +1,74 @@
+package modelo;
+
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+public class Enfermero {
+
+	private Habitacion habitacion;
+	private int id;
+	private String nombre;
+	private String apellido;	
+	private String genero;	
+	private Date fechaNacimiento;
+	
+	public Enfermero(int id, String nombre, String apellido, String genero, Date fechaNacimiento) {
+		this.id = id;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.genero = genero;
+		this.fechaNacimiento = fechaNacimiento;
+	}
+	
+	public Habitacion getHabitacion() {
+		return habitacion;
+	}
+	public void setHabitacion(Habitacion habitacion) {
+		this.habitacion = habitacion;
+	}
+	public int getId() {
+		return id;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public String getApellido() {
+		return apellido;
+	}
+	public String getGenero() {
+		return genero;
+	}
+	public Date getFechaNacimiento() {
+		return fechaNacimiento;
+	}	
+
+	public Emergencia CodigoAzul(Quirofano q) {
+		
+		LocalDateTime localDate = LocalDateTime.now(); 
+		Emergencia e = new Emergencia(0, q, "Codigo Azul", false, localDate);
+		return e;
+	}
+	
+	public double detenerTiempo(Emergencia e) {
+		LocalDateTime horaInicio = e.getMomentoLanzamiento();
+		LocalDateTime locaDate = LocalDateTime.now();
+		
+		int horaAntes = horaInicio.getHour();
+		int minAntes = horaInicio.getMinute();
+		int secAntes = horaInicio.getSecond();
+		
+		int horasTardadas = horaAntes - locaDate.getHour();
+		int minTardadas = minAntes - locaDate.getMinute();
+		int secTardadas = secAntes - locaDate.getSecond();
+		
+		 DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
+		 Date date = new Date(horasTardadas,minTardadas,secTardadas);
+		
+		return 
+		
+		;
+	}
+	
+}

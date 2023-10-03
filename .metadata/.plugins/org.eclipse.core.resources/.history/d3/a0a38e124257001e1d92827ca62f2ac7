@@ -1,0 +1,48 @@
+package modelo;
+
+public class Emergencia {
+
+	private int id;
+	private Habitacion quirofano;
+	private int tiempoRespuesta;
+	private String tipo;
+	private boolean atendido = false;
+	private double momentoLanzamiento;
+	
+	public Emergencia(int id, Habitacion quirofano,  String tipo, boolean atendido, double lanzamiento) {
+		this.id = id;
+		this.quirofano = quirofano;
+		this.tipo = tipo;
+		this.atendido = atendido;
+		this.momentoLanzamiento = lanzamiento;
+	}
+
+	
+	public int getId() {
+		return id;
+	}
+
+	public Habitacion getQuirofano() {
+		return quirofano;
+	}
+
+	public int getTiempoRespuesta() {
+		return tiempoRespuesta;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public boolean isAtendido() {
+		return atendido;
+	}
+
+
+	public void setTiempoRespuesta(int tiempoRespuesta) {
+		this.tiempoRespuesta = tiempoRespuesta;
+	}
+	
+	
+	
+}

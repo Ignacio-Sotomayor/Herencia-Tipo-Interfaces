@@ -1,0 +1,20 @@
+package modelo2;
+
+public class Elfo extends Personaje{
+
+	private int flechas;
+	private int punteria;
+	
+	public Elfo(String nombre, int vida, int velocity, int danio, int inteligencia, int flechas, int punteria) {
+		super(nombre, vida, velocity, danio, inteligencia);
+		this.flechas=flechas;
+		this.punteria = punteria;
+	}
+
+	@Override
+	public int atacar(Personaje P) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

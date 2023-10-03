@@ -1,0 +1,18 @@
+package modelo;
+import java.sql.SQLException;
+
+import database.DB;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		try {
+			DB.getDB().conectar();
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		} 
+		
+	}
+
+}

@@ -1,0 +1,56 @@
+package modelo2;
+
+public abstract class Personaje {
+
+	private String nombre;
+	private int vida;
+	private int velocity;
+	private int fuerza;
+	private int inteligencia;
+	
+	public Personaje(String nombre, int vida, int velocity, int fuerza, int inteligencia) {
+		super();
+		this.nombre = nombre;
+		this.vida = vida;
+		this.velocity = velocity;
+		this.fuerza = fuerza;
+		this.inteligencia = inteligencia;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public int getVelocity() {
+		return velocity;
+	}
+
+	public void setVelocity(int velocity) {
+		this.velocity = velocity;
+	}
+
+	public int getFuerza() {
+		return fuerza;
+	}
+
+	public void setFuerza(int fuerza) {
+		this.fuerza = fuerza;
+	}
+
+	public int getInteligencia() {
+		return inteligencia;
+	}
+
+	public void setInteligencia(int inteligencia) {
+		this.inteligencia = inteligencia;
+	}
+	
+	public void recuperse (int vida) {
+		this.vida +=vida;
+	}
+	
+}

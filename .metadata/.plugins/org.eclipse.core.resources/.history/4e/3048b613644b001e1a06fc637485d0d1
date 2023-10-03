@@ -1,0 +1,16 @@
+package modelo2;
+
+public class Caballero extends Personaje {
+
+	public Caballero(String nombre, int vida, int velocity, int fuerza, int inteligencia) {
+		super(nombre, vida, velocity, fuerza, inteligencia);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public int atacar(Personaje P) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

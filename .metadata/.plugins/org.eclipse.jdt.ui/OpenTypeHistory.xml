@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=Interfaces/src&lt;modelo{animal.java[animal" modifiers="1025" timestamp="1693858651776"/>
+    <typeInfo handle="=Interfaces2/src&lt;modelo{Unidad.java[Unidad" modifiers="1025" timestamp="1693871142064"/>
+    <typeInfo handle="=Interfaces2/src&lt;modelo{IConstruible.java[IConstruible" modifiers="513" timestamp="1693870173531"/>
+    <typeInfo handle="=Interfaces2/src&lt;modelo{IMovible.java[IMovible" modifiers="513" timestamp="1693870194982"/>
+    <typeInfo handle="=Interfaces2/C:\/Users\/nacho\/.p2\/pool\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\/jre\/lib\/jrt-fs.jar`java.desktop=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/=/module=/true=/&lt;java.awt.image(ImageProducer.class[ImageProducer" modifiers="1537" timestamp="1682445958000"/>
+    <typeInfo handle="=Interfaces2/src&lt;modelo{IHostil.java[IHostil" modifiers="513" timestamp="1693870222730"/>
+    <typeInfo handle="=Concurrencia/C:\/Users\/nacho\/.p2\/pool\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\/jre\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/=/module=/true=/&lt;java.lang(Thread.class[Thread" modifiers="33" timestamp="1682445958000"/>
+    <typeInfo handle="=Exceptions/C:\/Users\/nacho\/.p2\/pool\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\/jre\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/=/module=/true=/&lt;java.lang(Exception.class[Exception" modifiers="33" timestamp="1682445958000"/>
+    <typeInfo handle="=Exception Bank/src&lt;Excepciones{InvalidExtractionException.java[InvalidExtractionException" modifiers="1" timestamp="1694040812133"/>
+    <typeInfo handle="=INET/src&lt;modelo{Habitacion.java[Habitacion" modifiers="1025" timestamp="1695164068718"/>
+</typeInfoHistroy>

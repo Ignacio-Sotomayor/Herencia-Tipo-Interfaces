@@ -1,0 +1,8 @@
+package modelo2;
+
+public class Position{
+	
+	private int PosX;
+	private int PosY;
+	
+}

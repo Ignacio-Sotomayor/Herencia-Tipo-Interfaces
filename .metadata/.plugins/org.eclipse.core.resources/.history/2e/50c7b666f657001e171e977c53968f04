@@ -1,0 +1,160 @@
+package database;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.Date;
+import java.util.ArrayList;
+
+import modelo.Enfermero;
+import modelo.HabitacionParticular;
+import modelo.Paciente;
+import modelo.Quirofano;
+
+public class DB {
+
+	private static DB baseDatos;
+	private Connection conexion;
+
+	private DB() throws SQLException {
+		System.out.println("Iniciando base de datos");
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			System.out.println("No se pudo cargar el puente JDBC-ODBC.");
+			return;
+		}
+	}
+
+	public static DB getDB() throws SQLException {
+		if (baseDatos == null)
+			baseDatos = new DB();
+
+		return baseDatos;
+	}
+
+	public void conectar() throws SQLException {
+		conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/inet", "root", "");
+		System.out.println("Conexion Exitosa");
+	}
+
+	public void desconectar() throws SQLException {
+		System.out.println("Desconenctandose del Sevidor ...");
+		conexion.close();
+		System.out.println("Desconexion Exitosa");
+	}
+
+
+	public ArrayList<Paciente> obtenerPersonas() throws SQLException {
+
+		ArrayList<Paciente> pacientes = new ArrayList<Paciente>();
+
+		int id;
+		String nombre;
+		String Apellido;
+		String genero;
+		Date fechaNacimiento;
+		boolean obraSocial;
+		int numeroObraSocial;
+		String tipoDocumento;
+		int numeroDocumento;
+
+		Statement sentencia = conexion.createStatement();
+		ResultSet resultado = sentencia.executeQuery("SELECT * FROM pacientes ORDER BY nombre");
+
+		while (resultado.next()) {
+			id = resultado.getInt("idPaciente");
+			nombre = resultado.getString("NombrePaciente");
+			Apellido = resultado.getString("Apellidopaciente");
+			fechaNacimiento = resultado.getDate("nacimiento");
+			genero = resultado.getString("GeneroPaciente");
+			obraSocial = resultado.getBoolean("obraSocial");
+			numeroObraSocial = resultado.getInt("numeroObraSocial");
+			tipoDocumento = resultado.getString("tipoDocumento");
+			numeroDocumento = resultado.getInt("numeroDocumento");
+			
+			Paciente p = new Paciente(id, nombre, Apellido, genero, fechaNacimiento, obraSocial, numeroObraSocial, tipoDocumento, numeroDocumento);
+			pacientes.add(p);
+		}
+
+		return pacientes;
+
+	}
+	public ArrayList<Enfermero> obtenerEnfermeros() throws SQLException {
+
+		ArrayList<Enfermero> enfermeros = new ArrayList<Enfermero>();
+
+		int id;
+		String nombre;
+		String apellido;	
+		String genero;	
+		Date fechaNacimiento;
+
+		Statement sentencia = conexion.createStatement();
+		ResultSet resultado = sentencia.executeQuery("SELECT * FROM enfermero ORDER BY nombre");
+
+		while (resultado.next()) {
+			id = resultado.getInt("idEnfermero");
+			nombre = resultado.getString("NombreEnfermero");
+			apellido = resultado.getString("ApellidoEnfermero");
+			fechaNacimiento = resultado.getDate("fechaNacimiento");
+			genero = resultado.getString("generoEnfermero");
+			
+			Enfermero e = new Enfermero(id, nombre, apellido, genero, fechaNacimiento);
+			
+			enfermeros.add(e);
+		}
+
+		return enfermeros;
+
+	}
+
+	public ArrayList<HabitacionParticular> obtenerHabitaciones() throws SQLException {
+
+		ArrayList<HabitacionParticular> Habitaciones = new ArrayList<HabitacionParticular>();
+
+		int id;
+		int idPaciente;
+
+		Statement sentencia = conexion.createStatement();
+		ResultSet resultado = sentencia.executeQuery("SELECT * FROM habitacion ORDER BY id");
+
+		while (resultado.next()) {
+			id = resultado.getInt("idHabitacion");
+			idPaciente = resultado.getInt("idPaciente");
+		
+			
+			HabitacionParticular h = new HabitacionParticular(idPaciente, id);
+			
+			Habitaciones.add(h);
+		}
+
+		return Habitaciones;
+	}
+	
+	public ArrayList<Quirofano> obtenerQuirofanos() throws SQLException {
+
+		ArrayList<Quirofano> quirofanos = new ArrayList<Quirofano>();
+
+		int id;
+		int idPaciente;
+
+		Statement sentencia = conexion.createStatement();
+		ResultSet resultado = sentencia.executeQuery("SELECT * FROM quirofanos ORDER BY id");
+
+		while (resultado.next()) {
+			id = resultado.getInt("idQuirofano");
+			idPaciente = resultado.getInt("idPaciente");
+		
+			
+			Quirofano q = new Quirofano(id, idPaciente);
+			
+			quirofanos.add(q);
+		}
+
+		return quirofanos;
+	}	
+	
+}

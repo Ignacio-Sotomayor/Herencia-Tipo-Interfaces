@@ -1,0 +1,14 @@
+package modelo;
+
+import java.util.Date;
+
+public class Enfermero {
+
+	private Habitacion habitacion;
+	private int id;
+	private String nombre;
+	private String Apellido;	
+	private String genero;	
+	private Date fechaNacimiento;	
+	
+}

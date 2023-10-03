@@ -1,0 +1,23 @@
+package modelo;
+
+public class Habitacion {
+
+	private Paciente paciente;
+	private int numero;
+	
+	public Habitacion(int numero) {
+		this.numero = numero;
+	}
+	
+	public Paciente getPaciente() {
+		return paciente;
+	}
+	public void setPaciente(Paciente paciente) {
+		this.paciente = paciente;
+	}
+	public int getNumero() {
+		return numero;
+	}
+	
+	
+}

@@ -1,0 +1,15 @@
+package modelo;
+
+public abstract class Habitacion {
+
+	private Paciente paciente;
+
+
+	public Paciente getPaciente() {
+		return paciente;
+	}
+	public void setPaciente(Paciente paciente) {
+		this.paciente = paciente;
+	}
+	
+}

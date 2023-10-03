@@ -1,0 +1,21 @@
+package modelo;
+
+public class Emergencia {
+
+	private int id;
+	private String quirofano;
+	private int tiempoRespuesta;
+	private String tipo;
+	private boolean atendido = false;
+	
+	public Emergencia(int id, String quirofano, int tiempoRespuesta, String tipo, boolean atendido) {
+		this.id = id;
+		this.quirofano = quirofano;
+		this.tiempoRespuesta = tiempoRespuesta;
+		this.tipo = tipo;
+		this.atendido = atendido;
+	}
+	
+	
+	
+}

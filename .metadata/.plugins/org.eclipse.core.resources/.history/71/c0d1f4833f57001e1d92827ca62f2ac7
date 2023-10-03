@@ -1,0 +1,16 @@
+package modelo;
+
+public class Quirofano extends Habitacion {
+
+	private int numQuirofano;	
+
+	public Quirofano(int numQuirofano, Paciente paciente) {
+		super(paciente);
+		this.numQuirofano = numQuirofano;
+	}
+
+	public int getNumQuirofano() {
+		return numQuirofano;
+	}
+	
+}

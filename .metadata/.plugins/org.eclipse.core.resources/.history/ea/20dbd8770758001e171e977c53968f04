@@ -1,0 +1,69 @@
+package modelo;
+
+import java.time.LocalDateTime;
+
+public class Emergencia {
+
+	private int id;
+	private Habitacion quirofano;
+	private int tiempoRespuesta;
+	private String tipo;
+	private boolean atendido = false;
+	private int horaLanzamiento;
+	private int minLanzamiento;
+	private int secLanzamiento;
+	
+	public Emergencia(int id, Habitacion quirofano,  String tipo, boolean atendido, int hora, int min, int sec) {
+		this.id = id;
+		this.quirofano = quirofano;
+		this.tipo = tipo;
+		this.atendido = atendido;
+		this.horaLanzamiento = hora;
+		this.minLanzamiento = min;
+		this.secLanzamiento = sec;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public Habitacion getQuirofano() {
+		return quirofano;
+	}
+
+	public int getTiempoRespuesta() {
+		return tiempoRespuesta;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public boolean isAtendido() {
+		return atendido;
+	}
+
+	public void setTiempoRespuesta(int tiempoRespuesta) {
+		this.tiempoRespuesta = tiempoRespuesta;
+	}
+
+	public int getHoraLanzamiento() {
+		return horaLanzamiento;
+	}
+
+	public int getMinLanzamiento() {
+		return minLanzamiento;
+	}
+
+	public int getSecLanzamiento() {
+		return secLanzamiento;
+	}
+	
+	public String tardanza (int horas, int min, int sec) {
+		int hTardadas = this.horaLanzamiento - horas;
+		int mTardadas = this.minLanzamiento - min;
+		int sTardadas = this.secLanzamiento - sec;
+		return "Se tardo: "+hTardadas + " : " +mTardadas+" : "+ sTardadas;
+	}
+	
+}

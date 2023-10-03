@@ -1,0 +1,26 @@
+package modelo;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import database.DB;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		try {
+			DB.getDB().conectar();
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		} 
+		ArrayList<Paciente> pacientes = new ArrayList<Paciente>();
+		try {
+			pacientes = DB.getDB().obtenerPacientes();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

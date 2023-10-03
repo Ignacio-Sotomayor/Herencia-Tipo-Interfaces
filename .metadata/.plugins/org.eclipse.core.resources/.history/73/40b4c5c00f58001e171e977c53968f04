@@ -1,0 +1,39 @@
+package modelo;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import database.DB;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Paciente> pacientes = new ArrayList<Paciente>();
+		ArrayList<Enfermero> enfermeros = new ArrayList<Enfermero>();
+		
+		try {
+			DB.getDB().conectar();
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		} 
+	
+		try {
+			pacientes = DB.getDB().obtenerPacientes();
+		} catch (SQLException e) {
+			System.out.println( e.getMessage() );
+		}
+		
+		try {
+			enfermeros = DB.getDB().obtenerEnfermeros();
+		} catch (SQLException e) {
+			System.out.println( e.getMessage() );
+		}
+		
+		Paciente p0 = pacientes.get(0);
+		Paciente p1 = pacientes.get(1);
+		
+		
+		
+	}
+
+}

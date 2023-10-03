@@ -1,0 +1,5 @@
+package modelo2;
+
+public class Mago extends Personaje{
+
+}

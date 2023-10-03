@@ -1,0 +1,12 @@
+package modelo;
+
+public class HabitacionParticular extends Habitacion {
+
+	private int numero;
+	
+	public HabitacionParticular(Paciente paciente, int numero) {
+		super(paciente);
+		this.nuemro = numero;
+	}
+
+}

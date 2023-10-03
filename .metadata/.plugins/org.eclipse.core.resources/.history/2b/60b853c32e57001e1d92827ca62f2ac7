@@ -1,0 +1,47 @@
+package modelo;
+
+import java.util.Date;
+
+public class Enfermero {
+
+	private Habitacion habitacion;
+	private int id;
+	private String nombre;
+	private String apellido;	
+	private String genero;	
+	private Date fechaNacimiento;
+	
+	
+	
+	public Enfermero(int id, String nombre, String apellido, String genero, Date fechaNacimiento) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.genero = genero;
+		this.fechaNacimiento = fechaNacimiento;
+	}
+	public Habitacion getHabitacion() {
+		return habitacion;
+	}
+	public void setHabitacion(Habitacion habitacion) {
+		this.habitacion = habitacion;
+	}
+	public int getId() {
+		return id;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public String getApellido() {
+		return Apellido;
+	}
+	public String getGenero() {
+		return genero;
+	}
+	public Date getFechaNacimiento() {
+		return fechaNacimiento;
+	}	
+	
+	
+}

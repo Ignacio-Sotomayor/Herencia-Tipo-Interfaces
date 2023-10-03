@@ -1,0 +1,89 @@
+package modelo;
+
+import java.util.Date;
+
+public class Paciente {
+
+	private int id;
+	private String nombre;
+	private String Apellido;	
+	private String genero;	
+	private Date fechaNacimiento;	
+	private boolean obraSocial;
+	private int numeroObraSocial;	
+	private String tipoDocumento;	
+	private int numeroDocumento;
+	
+	public Paciente() {}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getApellido() {
+		return Apellido;
+	}
+
+	public void setApellido(String apellido) {
+		Apellido = apellido;
+	}
+
+	public String getGenero() {
+		return genero;
+	}
+
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
+
+	public Date getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+
+	public void setFechaNacimiento(Date fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
+	}
+
+	public boolean isObraSocial() {
+		return obraSocial;
+	}
+
+	public void setObraSocial(boolean obraSocial) {
+		this.obraSocial = obraSocial;
+	}
+
+	public int getNumeroObraSocial() {
+		return numeroObraSocial;
+	}
+
+	public void setNumeroObraSocial(int numeroObraSocial) {
+		this.numeroObraSocial = numeroObraSocial;
+	}
+
+	public String getTipoDocumento() {
+		return tipoDocumento;
+	}
+
+	public void setTipoDocumento(String tipoDocumento) {
+		this.tipoDocumento = tipoDocumento;
+	}
+
+	public int getNumeroDocumento() {
+		return numeroDocumento;
+	}
+
+	public void setNumeroDocumento(int numeroDocumento) {
+		this.numeroDocumento = numeroDocumento;
+	}
+
+	public int getId() {
+		return id;
+	}
+	
+	
+	
+}

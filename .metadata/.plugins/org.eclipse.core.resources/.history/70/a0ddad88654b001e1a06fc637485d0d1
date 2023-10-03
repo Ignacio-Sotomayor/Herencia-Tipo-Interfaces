@@ -1,0 +1,22 @@
+package modelo2;
+
+public class Position{
+	
+	private int PosX;
+	private int PosY;
+	
+	public Position(int PosX, int PosY) {
+		this.PosX = PosX;
+		this.PosY = PosY;
+	}
+	
+	public int getPosX() {
+		return PosX;
+	}
+	public int getPosY() {
+		return PosY;
+	}
+	
+	
+	
+}
